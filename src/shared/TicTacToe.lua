@@ -2,6 +2,7 @@
 local sm  = require(game:GetService("ReplicatedStorage"):WaitForChild("Common"):WaitForChild("ServiceManager"))
 
 -- Specific Dependencies
+local TPG = require(sm.RS:WaitForChild("Common"):WaitForChild("TwoPlayerGame"))
 local TTTf = require(sm.RS:WaitForChild("Common"):WaitForChild("TicTacToe_endConditions"))
 
 -- TicTacToe Class
