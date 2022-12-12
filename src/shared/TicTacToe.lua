@@ -3,7 +3,7 @@ local sm  = require(game:GetService("ReplicatedStorage"):WaitForChild("Common"):
 
 -- Specific Dependencies
 local TPG = require(sm.RS:WaitForChild("Common"):WaitForChild("TwoPlayerGame"))
-local TTTf = require(sm.RS:WaitForChild("Common"):WaitForChild("TicTacToe_endConditions"))
+local TTT_endConditions = require(sm.RS:WaitForChild("Common"):WaitForChild("TicTacToe_endConditions"))
 
 -- TicTacToe Class
 TTT = {}
@@ -49,14 +49,14 @@ end
 
 function TTT:game_check() -- Note: true means that the game must end
 
-    local VictoryConditionMet = TTTf.VictoryConditionMet(self.matrix)
+    local VictoryConditionMet = TTT_endConditions.VictoryConditionMet(self.matrix)
     if VictoryConditionMet then
         print("VictoryConditionMet ==", VictoryConditionMet)
         print(self.matrix)
         return true
     end
 
-    local PlaysLeft = TTTf.RemainingPlays(self.matrix)
+    local PlaysLeft = TTT_endConditions.RemainingPlays(self.matrix)
     if not PlaysLeft then
         print("PlaysLeft ==", PlaysLeft)
         return true
