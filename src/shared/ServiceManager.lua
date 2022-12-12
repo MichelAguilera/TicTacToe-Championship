@@ -6,12 +6,13 @@
 ServiceManager = {}
 
 -- Directories
-ServiceManager.RS = game:GetService("ReplicatedStorage")
-ServiceManager.SS = game:GetService("ServerStorage")
-ServiceManager.SSS = game:GetService("ServerScriptService")
 ServiceManager.WS = game:GetService("Workspace")
+ServiceManager.RS = game:GetService("ReplicatedStorage")
+ServiceManager.SSS = game:GetService("ServerScriptService")
+ServiceManager.SS = game:GetService("ServerStorage")
 
 -- Services
--- ServiceManager.CS = game:GetService()
+ServiceManager.PS = game:GetService("Players")
+
 
 return ServiceManager
